@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/flatly/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/bower_components/angucomplete-alt/angucomplete-alt.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <title>Music History</title>
+  </head>
+
+  <body ng-app="MusicApp">
+    <nav class="navbar navbar-default navbar-inverse navbar-static-top" ng-controller="AddCtrl">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#/"><span class="glyphicon glyphicon-cd" aria-hidden="true"></span></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <angucomplete-alt id="songSearch"
+              placeholder="Search songs"
+              pause="400"
+              selected-object="selectedSong"
+              remote-url="https://api.spotify.com/v1/search?type=track&limit=8&q="
+              remote-url-data-field="tracks.items"
+              title-field="name"
+              description-field="artists[0].name"
+              image-field="album.images[1].url"
+              input-class="form-control"/>
+            </div>
+            <button type="button" class="btn btn-default" ng-click="addSong()">Add Song</button>
+          </form>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container" ng-view>
+    </div>
+  </body>
+  <script src="lib/bower_components/angular/angular.min.js"></script>
+  <script src="lib/bower_components/angular-route/angular-route.js"></script>
+  <script src="lib/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="lib/bower_components/angular-filter/dist/angular-filter.min.js"></script>
+  <script src="lib/bower_components/firebase/firebase.js"></script>
+  <script src="lib/bower_components/angularfire/dist/angularfire.min.js"></script>
+  <script src="lib/bower_components/angucomplete-alt/angucomplete-alt.js"></script>
+  <script src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="app/app.js"></script>
+  <script src="app/controllers/SongCtrl.js"></script>
+  <script src="app/controllers/AddCtrl.js"></script>
+  <script src="app/controllers/DetailCtrl.js"></script>
+  <script src="app/factories/getSongs.js"></script>
+</html>

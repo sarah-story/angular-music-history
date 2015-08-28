@@ -1,0 +1,21 @@
+<div class="col-md-12 well" id="song-form">
+  <h2>Add Song</h2>
+
+  <div class="form-group">
+    <label for="titleInput">Title:</label>
+    <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+    <angucomplete-alt id="songSearch"
+              placeholder="Search songs"
+              pause="400"
+              selected-object="selectedSong"
+              remote-url="https://api.spotify.com/v1/search?type=track&limit=8&q="
+              remote-url-data-field="tracks.items"
+              title-field="name"
+              description-field="artists[0].name"
+              image-field="album.images[0].url"
+              input-class="form-control form-control-small"/>
+  </div>
+
+  <button class="btn btn-primary" id="submitSong" ng-click="addSong()">Add Song</button>
+
+</div>

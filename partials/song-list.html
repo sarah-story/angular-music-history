@@ -1,0 +1,24 @@
+<div class="col-md-4">
+  <div class="well">
+    <label for="artists">Artist</label>
+    <select class="form-control" id="artists" ng-options="song.artist for song in songs | filter: albumSelect.artist | unique: 'artist'" ng-model="artistSelect">
+      <option>--</option>
+    </select>
+    <label for="album">Album</label>
+    <select class="form-control" id="albums" ng-options="song.album for song in songs | filter: {artist: artistSelect.artist}| unique: 'album'" ng-model="albumSelect">
+      <option>--</option>
+    </select>
+    <br>
+    <button class="btn btn-primary btn-block" ng-click="removeFilter()">Remove Filter</button>
+  </div>
+</div>
+<div class="col-md-8">
+  <div class="well song-info row" ng-repeat="song in songs | filter: {album: albumSelect.album} | filter: {artist: artistSelect.artist}">
+    <img class="col-md-2" ng-src="{{ song.image }}">
+    <div class="text col-md-10">
+      <span class="glyphicon glyphicon-remove" ng-click="songs.$remove(song)"></span>
+      <h3><a href="#/song/{{song.$id}}">{{ song.title }}</a></h3>
+      <p><a href="#/artist/{{song.$id}}">{{ song.artist }}</a> | <a href="#/album/{{song.$id}}">{{ song.album }}</a></p>
+    </div>
+  </div>
+</div>
