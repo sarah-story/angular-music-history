@@ -1,5 +1,6 @@
 var app = angular.module("MusicApp", ["angular.filter", "ngRoute", "firebase", "angucomplete-alt"]);
 
+//Configure routes for app
 app.config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/', {
     templateUrl: 'partials/song-list.html',
@@ -21,6 +22,7 @@ app.config(['$routeProvider', function($routeProvider) {
   });
 }]);
 
+//Whitelist spotify
 app.config(function($sceDelegateProvider) {
     $sceDelegateProvider.resourceUrlWhitelist([
         'self',

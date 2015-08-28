@@ -9,6 +9,9 @@
   </head>
 
   <body ng-app="MusicApp">
+
+    <!-- NAVBAR -->
+
     <nav class="navbar navbar-default navbar-inverse navbar-static-top" ng-controller="AddCtrl">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -25,6 +28,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <form class="navbar-form navbar-right" role="search">
+            <!--Add Songs Textbox with Autocomplete Dropdown-->
             <div class="form-group">
               <angucomplete-alt id="songSearch"
               placeholder="Search songs"
@@ -42,9 +46,14 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
+
+    <!-- Container for route content -->
+
     <div class="container" ng-view>
     </div>
   </body>
+
+  <!--Bower Components-->
   <script src="lib/bower_components/angular/angular.min.js"></script>
   <script src="lib/bower_components/angular-route/angular-route.js"></script>
   <script src="lib/bower_components/jquery/dist/jquery.min.js"></script>
@@ -53,7 +62,9 @@
   <script src="lib/bower_components/angularfire/dist/angularfire.min.js"></script>
   <script src="lib/bower_components/angucomplete-alt/angucomplete-alt.js"></script>
   <script src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!--Config-->
   <script src="app/app.js"></script>
+  <!--Controllers-->
   <script src="app/controllers/SongCtrl.js"></script>
   <script src="app/controllers/AddCtrl.js"></script>
   <script src="app/controllers/DetailCtrl.js"></script>
