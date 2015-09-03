@@ -18,11 +18,6 @@
 <!-- Song info -->
 <div class="col-md-8">
   <div class="well song-info row" ng-repeat="song in songs | filter: {album: albumSelect.album} | filter: {artist: artistSelect.artist}">
-    <img class="col-md-2" ng-src="{{ song.image }}">
-    <div class="text col-md-10">
-      <span class="glyphicon glyphicon-remove" ng-click="songs.$remove(song)"></span>
-      <h3><a href="#/song/{{song.$id}}">{{ song.title }}</a></h3>
-      <p><a href="#/artist/{{song.$id}}">{{ song.artist }}</a> | <a href="#/album/{{song.$id}}">{{ song.album }}</a></p>
-    </div>
+    <x-song-info song="song"></x-song-info>
   </div>
 </div>

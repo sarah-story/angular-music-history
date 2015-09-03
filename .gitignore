@@ -1,4 +1,3 @@
-lib/bower_components/**
-Gruntfile.js
-lib/.sass-cache/**
-lib/node_modules/**
+lib/node_modules
+lib/bower_components
+sass-cache

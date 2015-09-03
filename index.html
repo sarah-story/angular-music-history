@@ -7,10 +7,8 @@
     <link rel="stylesheet" type="text/css" href="styles/main.css">
     <title>Music History</title>
   </head>
-
-  <body ng-app="MusicApp">
-
-    <!-- NAVBAR -->
+  
+  <body ng-cloak>
 
     <nav class="navbar navbar-default navbar-inverse navbar-static-top" ng-controller="AddCtrl">
       <div class="container-fluid">
@@ -52,6 +50,7 @@
     <div class="container" ng-view>
     </div>
   </body>
+<<<<<<< HEAD
 
   <!--Bower Components-->
   <script src="lib/bower_components/angular/angular.min.js"></script>
@@ -69,4 +68,7 @@
   <script src="app/controllers/AddCtrl.js"></script>
   <script src="app/controllers/DetailCtrl.js"></script>
   <script src="app/factories/getSongs.js"></script>
+=======
+  <script data-main="app/config" src="lib/bower_components/requirejs/require.js"></script>
+>>>>>>> af54fb189b071a0367510937408c0b9ef1f6a4f7
 </html>

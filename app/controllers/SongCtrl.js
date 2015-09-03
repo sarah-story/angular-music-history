@@ -1,6 +1,10 @@
-app.controller("SongCtrl", function($scope, $firebaseArray) {
-  //Get array of songs from firebase and bind them to $scope.songs to be displayed
-  //in song-list.html
+
+import * as angular from "angular";
+import * as _firebase from "firebase";
+import * as angularfire from "angularfire";
+
+
+function SongCtrl($scope, $firebaseArray) {
 
   var songRef = new Firebase("https://blistering-inferno-3867.firebaseio.com/songs");
 
@@ -19,4 +23,8 @@ app.controller("SongCtrl", function($scope, $firebaseArray) {
     $scope.artistSelect = "";
   };
 
-});
+};
+
+SongCtrl.$inject=['$scope', '$firebaseArray'];
+
+export default SongCtrl;

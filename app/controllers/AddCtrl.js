@@ -1,6 +1,9 @@
-//Controller for add songs input in navbar
 
-app.controller("AddCtrl", function($scope, $firebaseArray) {
+import * as angular from "angular";
+import * as _firebase from "firebase";
+import * as angularfire from "angularfire";
+
+function AddCtrl($scope, $firebaseArray) {
 
   //Get song array
 
@@ -30,4 +33,8 @@ app.controller("AddCtrl", function($scope, $firebaseArray) {
     $scope.$broadcast('angucomplete-alt:clearInput');
 
   };
-});
+};
+
+AddCtrl.$inject = ['$scope', '$firebaseArray'];
+
+export default AddCtrl;
