@@ -1,4 +1,8 @@
-app.controller("AddCtrl", function($scope, $firebaseArray) {
+import * as angular from "angular";
+import * as _firebase from "firebase";
+import * as angularfire from "angularfire";
+
+function AddCtrl($scope, $firebaseArray) {
 
   var songRef = new Firebase("https://blistering-inferno-3867.firebaseio.com/songs");
 
@@ -20,4 +24,8 @@ app.controller("AddCtrl", function($scope, $firebaseArray) {
     });
     $scope.$broadcast('angucomplete-alt:clearInput');
   };
-});
+};
+
+AddCtrl.$inject = ['$scope', '$firebaseArray'];
+
+export default AddCtrl;
