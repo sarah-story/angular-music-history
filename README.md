@@ -4,7 +4,7 @@ This is the final iteration of the Music History web app. Music History is a bas
 
 It is connected to the Spotify API so that the user can search for and listen to music. The app was built using AngularJS and it utilizes RequireJS. I used features from [ES6](http://es6-features.org/) so I used [Babel](https://babeljs.io/) to compile the project to ES5. 
 
-###Getting Started
+##Getting Started
 
 #####Clone the repo
 
@@ -30,7 +30,7 @@ python -m SimpleHTTPServer 8000
 The website should be running on http://localhost:8000. If you make any changes, you can run grunt by:
 
 ```
-cd /lib
+cd ./lib
 grunt
 ```
 
