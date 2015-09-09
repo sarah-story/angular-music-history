@@ -15,7 +15,7 @@ git clone https://github.com/sarah-story/angular-music-history.git
 #####Install dependencies
 
 ``` 
-cd ~/angular-music-history/lib
+cd ./angular-music-history/lib
 bower install
 npm instal
 ```
@@ -27,7 +27,7 @@ cd ..
 python -m SimpleHTTPServer 8000
 ```
 
-The website should be running on http://localhost:800. If you make any changes, you can run grunt by:
+The website should be running on http://localhost:8000. If you make any changes, you can run grunt by:
 
 ```
 cd /lib
